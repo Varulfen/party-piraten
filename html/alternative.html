@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KnightDuckClub - Alternative</title>
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <script src="../javascript/src.js" defer></script>
+    <script src="../javascript/video.js" defer></script>
+    <script src="../javascript/alternative.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <link rel="icon" href="../images/ico.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <h1><span>Knight</span><span>&nbsp;&nbsp;&nbsp;&nbsp;Duck</span><span>&nbsp;&nbsp;Club</span></h1>
+    <img id="header-image" src="../images/duck.png" alt="DJ Duck"/>
+</header>
+<nav>
+    <!-- empty -->
+</nav>
+
+<main>
+    <div class="u">
+        <p>Gesamtanzahl: </p><p id="total-count"></p>
+        <p>Verbleibend: </p><p id="count"></p>
+    </div>
+    <div class="u">
+        <label>Aktueller Code:
+            <input id="code-input" placeholder="123 456" readonly>
+        </label>
+        <button onclick="drawRandomCode()">Next Code</button>
+
+    </div>
+
+    <div id="message-div" hidden="hidden"><p id="message-p"></p></div>
+    <div id="video-container"></div>
+
+    <div id="control-div" hidden="hidden">
+        <button id="seek-backward-button" onclick="seekBackward()" class="control-button control-button-color" title="-10s"><i class="fas fa-backward"></i></button>
+        <button id="play-pause-button" onclick="playOrPauseVideo()" class="control-button-color" title="Play / Pause"><i id="play-pause-button-icon" class="fas fa-play"></i></button>
+        <button id="seek-forward-button" onclick="seekForward()" class="control-button control-button-color" title="+10s"><i class="fas fa-forward"></i></button>
+        <button id="stop-player-button" onclick="stopPlayer()" class="control-button control-button-color" title="Stop"><i class="fas fa-stop"></i></button>
+        <button id="show-conclusion-button" onclick="showHideConclusion()" title="Tooltip für eine Sanuye"></button>
+    </div>
+    <div id="solution-div" hidden="hidden">
+        <p id="title-p">Titel: </p><span id="title"></span>
+        <p id="year-p">Jahr: </p><span id="year"></span>
+        <p id="artist-p">Künstler: </p><span id="artist"></span>
+    </div>
+    <div class="u2">
+        <input type="file" id="csvInput" accept=".csv">
+        <button id="down">Download</button>
+    </div>
+
+</main>
+<footer>
+    <div>
+        <a href="../index.html">Main Version</a>
+    </div>
+</footer>
+
+</body>
+</html>

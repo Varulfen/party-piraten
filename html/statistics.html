@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <!-- Metadaten -->
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KnightDuckClub - Statistics</title>
+    <link rel="icon" href="../images/ico.png" type="image/png">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" defer></script>
+
+    <!-- Scripts -->
+    <script src="../javascript/navbar.js" defer></script>
+    <script src="../javascript/theme.js" defer></script>
+</head>
+
+<body>
+
+<my-navbar></my-navbar>
+
+<main>
+
+<!-- Allgemeines -->
+    <div class="accordion m-3" id="">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseTwo">
+                    Allgemeines
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#solution1-div">
+                <div class="accordion-body">
+                    <table class="table">
+                        <colgroup>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <td>Anzahl Songs</td>
+                            <td>676</td>
+                        </tr>
+                        <tr>
+                            <td>Häufigstes Jahr:</td>
+                            <td>2001 (29)</td>
+                        </tr>
+                        <tr>
+                            <td>Durchschnittsjahr</td>
+                            <td>1998.7</td>
+                        </tr>
+                        <tr>
+                            <td>Häufigste Künstler</td>
+                            <td>Feuerschwanz (10)</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Saltatio Mortis (8)</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Versengold (6)</td>
+                        </tr>
+
+                        <tr>
+                            <td>Mehrfach vorgeschlagen</td>
+                            <td>49 (s. Duplikate)</td>
+                        </tr>
+                        <tr>
+                            <td>nach Mitternacht hinzugefügt</td>
+                            <td>35 %</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Genres -->
+    <div class="accordion m-3" id="solution1-div">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Genres
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#solution1-div">
+                <div class="accordion-body">
+                    <table class="table">
+                        <colgroup>
+                            <col style="width: auto;">
+                            <col style="width: 20%;">
+                            <col style="width: 20%;">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th>Genre</th>
+                            <th>Titel</th>
+                            <th>Prozent</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Pop</td>
+                            <td>167</td>
+                            <td>24,7 %</td>
+                        </tr>
+                        <tr>
+                            <td>Rock / Alternative</td>
+                            <td>133</td>
+                            <td>19,6 %</td>
+                        </tr>
+                        <tr>
+                            <td>Metal / Hard Rock</td>
+                            <td>100</td>
+                            <td>14,8 %</td>
+                        </tr>
+                        <tr>
+                            <td>Folk / Mittelalter</td>
+                            <td>78</td>
+                            <td>11,5 %</td>
+                        </tr>
+                        <tr>
+                            <td>Elektronisch / Dance</td>
+                            <td>67</td>
+                            <td>9,9 %</td>
+                        </tr>
+                        <tr>
+                            <td>Schlager</td>
+                            <td>50</td>
+                            <td>7,4 %</td>
+                        </tr>
+                        <tr>
+                            <td>Klassik / Soundtrack</td>
+                            <td>39</td>
+                            <td>5,8 %</td>
+                        </tr>
+                        <tr>
+                            <td>Hip-Hop / Rap</td>
+                            <td>33</td>
+                            <td>4,9 %</td>
+                        </tr>
+                        <tr>
+                            <td>R&B / Soul</td>
+                            <td>11</td>
+                            <td>1,6 %</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Duplikate -->
+    <div class="accordion m-3" id="solution121-div">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwwo" aria-expanded="false" aria-controls="collapseTwwo">
+                    Duplikate
+                </button>
+            </h2>
+            <div id="collapseTwwo" class="accordion-collapse collapse" data-bs-parent="#solution121-div">
+                <div class="accordion-body">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>Titel</th>
+                            <th>Anzahl</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr><td>Wellerman</td><td>4</td></tr>
+                        <tr><td>Durch den Monsun</td><td>3</td></tr>
+                        <tr><td>Ketchup Song</td><td>3</td></tr>
+                        <tr><td>It's my Life</td><td>3</td></tr>
+                        <tr><td>Mief</td><td>3</td></tr>
+                        <tr><td>Das Lied der Schlümpfe</td><td>3</td></tr>
+                        <tr><td>Gangstas Paradise</td><td>2</td></tr>
+                        <tr><td>Eye of the Tiger</td><td>2</td></tr>
+                        <tr><td>Beinhart</td><td>2</td></tr>
+                        <tr><td>Nordisch by Nature</td><td>2</td></tr>
+                        <tr><td>Barbie Girl</td><td>2</td></tr>
+                        <tr><td>Waka Waka</td><td>2</td></tr>
+                        <tr><td>Dance Monkey</td><td>2</td></tr>
+                        <tr><td>Non, Je ne regrette rien</td><td>2</td></tr>
+                        <tr><td>Goldeneye</td><td>2</td></tr>
+                        <tr><td>Holz</td><td>2</td></tr>
+                        <tr><td>Schrei nach Liebe</td><td>2</td></tr>
+                        <tr><td>Wish I had an Angel</td><td>2</td></tr>
+                        <tr><td>APT</td><td>2</td></tr>
+                        <tr><td>Mah na mah ne (Sesamstraße)</td><td>2</td></tr>
+                        <tr><td>Ironic</td><td>2</td></tr>
+                        <tr><td>They dont care about us</td><td>2</td></tr>
+                        <tr><td>Macarena</td><td>2</td></tr>
+                        <tr><td>Viva Colonia</td><td>2</td></tr>
+                        <tr><td>Toxicity</td><td>2</td></tr>
+                        <tr><td>Lose yourself</td><td>2</td></tr>
+                        <tr><td>Let's get loud</td><td>2</td></tr>
+                        <tr><td>Diggy Diggy Hole</td><td>2</td></tr>
+                        <tr><td>Crucified</td><td>2</td></tr>
+                        <tr><td>Bohemian Rapsody</td><td>2</td></tr>
+                        <tr><td>Yesterday</td><td>2</td></tr>
+                        <tr><td>Running with the Wolves</td><td>2</td></tr>
+                        <tr><td>Over the Hills and far away</td><td>2</td></tr>
+                        <tr><td>Yindy</td><td>2</td></tr>
+                        <tr><td>Feel Good Inc</td><td>2</td></tr>
+                        <tr><td>Down Under</td><td>2</td></tr>
+                        <tr><td>Wake the White Wolf</td><td>2</td></tr>
+                        <tr><td>Alt wie ein Baum</td><td>2</td></tr>
+                        <tr><td>The Sound of Silence</td><td>2</td></tr>
+                        <tr><td>Hit the Road Jack</td><td>2</td></tr>
+                        <tr><td>Take Me Home, Country Roads</td><td>2</td></tr>
+                        <tr><td>Chop Suey!</td><td>2</td></tr>
+                        <tr><td>Nothing Else Matters</td><td>2</td></tr>
+                        <tr><td>Bodies</td><td>2</td></tr>
+                        <tr><td>Lemon Tree</td><td>2</td></tr>
+                        <tr><td>Breaking the Law</td><td>2</td></tr>
+                        <tr><td>Wannabe</td><td>2</td></tr>
+                        <tr><td>All The Things She Said</td><td>2</td></tr>
+                        <tr><td>Wackelkontakt</td><td>2</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</main>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html lang="de">
+<head>
+    <!-- Metadaten -->
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KnightDuckClub</title>
+    <link rel="icon" href="../images/ico.png" type="image/png">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" defer></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Scripts -->
+    <script src="../javascript/src.js" defer></script>
+    <script src="../javascript/video.js" defer></script>
+    <script src="../javascript/navbar.js" defer></script>
+    <script src="../javascript/theme.js" defer></script>
+
+    <script src="https://www.youtube.com/iframe_api" defer></script>
+</head>
+
+<body style="min-width: 20.5em">
+
+
+<my-navbar></my-navbar>
+
+
+<main>
+
+<!-- Img + Input -->
+    <div class="card m-3" >
+        <div class="row g-0">
+            <div class="col-5 m-1 d-flex justify-content-center align-items-center">
+                <img src="../images/duck.png" width="125" class="img-fluid rounded-start" alt="DJ Duck">
+            </div>
+            <div class="col">
+                <div class="card-body">
+                    <h5 class="card-title">Code</h5>
+
+                    <form onsubmit="startPlay(); return false;">
+                        <div class="input-group mb-3">
+                            <input id="code-input" inputmode="numeric" class="form-control" placeholder="123 456" aria-label="Username" aria-describedby="close-btn-span">
+                            <span id="close-btn-span" class="input-group-text">
+                                <button id="clear-button" class="btn-close" onclick="clearInput()" type="button" aria-label="Close"></button>
+                            </span>
+                        </div>
+
+                        <button id="play-button" class="w-100 btn btn-outline-primary" type="submit">
+                            Play
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Message Div -->
+    <div id="message-div" class="card m-3 bg-danger bg-opacity-75 text-center d-none">
+        <p id="message-p" class="mb-1"></p>
+    </div>
+
+<!-- Control Buttons -->
+    <div class="card m-3 border-0">
+        <div id="control-button-grp" class="btn-group gap-3" role="group">
+            <button type="button" class="btn btn-outline-secondary" id="seek-backward-button" onclick="seekBackward()"><i class="fas fa-backward"></i></button>
+            <button type="button" class="btn btn-outline-primary" id="play-pause-button" onclick="playOrPauseVideo()"><i id="play-pause-button-icon" class="fas fa-play"></i></button>
+            <button type="button" class="btn btn-outline-secondary" id="seek-forward-button" onclick="seekForward()"><i class="fas fa-forward"></i></button>
+            <button type="button" class="btn btn-outline-danger" id="stop-player-button" onclick="stopPlayer()"><i class="fas fa-stop"></i></button>
+        </div>
+    </div>
+
+<!-- Solution -->
+    <div class="accordion m-3" id="solutionAccordion">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#solutionCollapseDiv" aria-expanded="false" aria-controls="solutionCollapseDiv">
+                    Lösung
+                </button>
+            </h2>
+            <div id="solutionCollapseDiv" class="accordion-collapse collapse" data-bs-parent="#solutionAccordion">
+                <div class="accordion-body">
+                    <div class="row">
+                        <div class="col-3">
+                            <strong>Künstler:</strong>
+                        </div>
+                        <div class="col offset-0">
+                            <span id="artist">-</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">
+                            <strong>Jahr:</strong>
+                        </div>
+                        <div class="col offset-0">
+                            <span id="year">-</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">
+                            <strong>Titel:</strong>
+                        </div>
+                        <div class="col offset-0">
+                            <span id="title">-</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--
+    <div class="accordion m-3" id="solutionaccordion">
+        <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#solution-collapse-div" aria-expanded="false" aria-controls="solution-collapse-div">
+                Lösung
+            </button>
+        </h2>
+        <div id="solution-collapse-div" class="accordion-collapse collapse" data-bs-parent="#solutionaccordion">
+            <div class="accordion-body">
+                <div class="row">
+                    <div class="col-3">
+                        <strong>Künstler:</strong>
+                    </div>
+                    <div class="col offset-0">
+                        <span id="artist">-</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <strong>Jahr:</strong>
+                    </div>
+                    <div class="col offset-0">
+                        <span id="year">-</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <strong>Titel:</strong>
+                    </div>
+                    <div class="col offset-0">
+                        <span id="title">-</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>-->
+
+    <div id="video-container" class="d-none"></div>
+
+
+</main>
+
+<!--
+todo not sticky
+<footer class="footer mt-auto py-3 bg-body-tertiary">
+    <div class="container"><small class="text-body-secondary">Place sticky footer content here.</small></div>
+</footer>
+-->
+
+</body>
+</html>
