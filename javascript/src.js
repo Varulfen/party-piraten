@@ -26,12 +26,14 @@ codeInput.addEventListener("input", function() {
 });
 
 function startPlay() {
+    showDiv(loadingSpinner);
     console.clear(); // avoid flooding
     stopPlayer();
     const searchCode = codeInput.value.replace(" ", "");
     getEntry(searchCode).then(entry => {
         if(!jsonLoaded) {
             showMessage("JSON konnte nicht geladen werden");
+            hideDiv(loadingSpinner);
         }
         else if (entry) {
             hideMessageDiv();
@@ -44,6 +46,7 @@ function startPlay() {
             embedVideo(entry.url);
         } else {
             showMessage("Code wurde nicht gefunden");
+            hideDiv(loadingSpinner);
         }
     });
 }

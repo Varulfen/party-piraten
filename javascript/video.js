@@ -36,9 +36,10 @@ function embedVideo(url) {
 
         // disable buttons while player loads
         disableControlButtons();
-        showDiv(loadingSpinner);
+
     } else {
         showMessage("Ungültige URL: " + url);
+        hideDiv(loadingSpinner);
     }
 }
 
