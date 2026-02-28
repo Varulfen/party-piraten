@@ -1,4 +1,4 @@
-//const path = "/hitest/src/party-piraten";
+//const path = "/hitest/src/party-piraten/";
 const path = "";
 
 class Navbar extends HTMLElement {
@@ -49,6 +49,3 @@ class Navbar extends HTMLElement {
 }
 
 customElements.define("my-navbar", Navbar);
-
-
-
