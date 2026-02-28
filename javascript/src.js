@@ -93,7 +93,7 @@ function setConclusion(entry) {
 async function loadData() {
     if (cachedJson) return cachedJson;
 
-    const response = await fetch("../data/codes.json");
+    const response = await fetch("data/codes.json");
     if (!response.ok) {
         return null;
     }

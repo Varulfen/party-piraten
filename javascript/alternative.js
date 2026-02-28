@@ -1,8 +1,7 @@
 
 
 let json = {};
-//const file = "/../../hitest/codes.json";
-const file = "/src/hitest/codes.json";
+const file = "../data/codes.json";
 let remainingCodes = [];
 let totalCount;
 
@@ -15,13 +14,15 @@ window.addEventListener("DOMContentLoaded", () => {
         .then(data => {
             console.log("JSON loaded");
             json = data;
+            cachedJson = data;
+            jsonLoaded = true;
             remainingCodes = Object.keys(data);
             totalCount = remainingCodes.length;
             document.getElementById("total-count").textContent = totalCount;
             document.getElementById("count").textContent = remainingCodes.length.toString();
             hideMessageDiv();
         })
-        .catch(() => showMessage('Cannot load JSON'));
+        .catch((error) => showMessage('Error: ' + error));
 })
 
 

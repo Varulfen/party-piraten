@@ -3,6 +3,7 @@
 const videoContainer = document.getElementById("video-container");
 const playPauseButtonIcon = document.getElementById('play-pause-button-icon');
 const controlBtnGrp = document.querySelectorAll("#control-button-grp button");
+const loadingSpinner = document.getElementById("loading-spinner");
 
 let player;  // YouTube Player-Objekt
 let playing = false;
@@ -35,6 +36,7 @@ function embedVideo(url) {
 
         // disable buttons while player loads
         disableControlButtons();
+        showDiv(loadingSpinner);
     } else {
         showMessage("Ungültige URL: " + url);
     }
@@ -64,6 +66,7 @@ function enableControlButtons() {
 function onPlayerReady() { // event
     playVideo();
     enableControlButtons();
+    hideDiv(loadingSpinner);
 }
 function onPlayerError() {
     showMessage("Player Error");
