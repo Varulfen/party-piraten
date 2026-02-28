@@ -1,5 +1,5 @@
 //const path = "/hitest/src/party-piraten/";
-const path = "";
+const path = "https://varulfen.github.io/party-piraten/";
 
 class Navbar extends HTMLElement {
     connectedCallback() {
@@ -49,3 +49,4 @@ class Navbar extends HTMLElement {
 }
 
 customElements.define("my-navbar", Navbar);
+
